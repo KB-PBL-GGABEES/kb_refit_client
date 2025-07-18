@@ -21,6 +21,13 @@ const items = ref<TabsItem[]>([
 const isBottomSheetOpen = ref(false);
 const runtimeConfig = useRuntimeConfig();
 
+const badgeList = [
+  { image: "/assets/images/badges/1.png" },
+  { image: "/assets/images/badges/2.png" },
+  { image: "/assets/images/badges/3.png" },
+  { image: "/assets/images/badges/4.png" },
+];
+
 console.log(runtimeConfig.public.apiBaseUrl);
 </script>
 
@@ -100,9 +107,11 @@ console.log(runtimeConfig.public.apiBaseUrl);
             @click="isBottomSheetOpen = !isBottomSheetOpen"
           />
         </div>
-        <div class="p-4 max-h-[500px] overflow-y-scroll">
+        <div class="p-4 max-h-[500px] overflow-y-scroll max-w-sm mx-auto w-full scroll scrollbar-hide">
           <div class="h-[1024px]">
-            지갑 들어가면 뭐 이정도 길이 되지 않을까?
+            <mywallet :badge-list="badgeList" />
+            <Addbrandbadge/>
+            <mybenefit/>
           </div>
         </div>
       </template>
