@@ -4,7 +4,7 @@ import type { CardProps } from "~/interfaces/common/card.interface";
 const props = withDefaults(defineProps<CardProps>(), {
   description: undefined,
   href: undefined,
-  className: "",
+  className: ""
 });
 </script>
 <template>
