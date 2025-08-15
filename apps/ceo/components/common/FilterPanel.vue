@@ -16,7 +16,7 @@ const emit = defineEmits<{
 // 날짜 범위
 const rangeValue = shallowRef({
   start: today(getLocalTimeZone()),
-  end: today(getLocalTimeZone()),
+  end: today(getLocalTimeZone())
 });
 
 // 열림 상태
